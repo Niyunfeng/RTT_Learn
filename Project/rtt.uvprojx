@@ -313,7 +313,7 @@
             <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
-            <OneElfS>0</OneElfS>
+            <OneElfS>1</OneElfS>
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
@@ -333,7 +333,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>__CC_ARM</Define>
+              <Define></Define>
               <Undefine></Undefine>
               <IncludePath>..\rtthread\3.0.3\bsp;..\rtthread\3.0.3\components\finish;..\rtthread\3.0.3\include;..\rtthread\3.0.3\include\libc;..\rtthread\3.0.3\src;..\rtthread\3.0.3\libcpu\arm\cortex-m3;..\User</IncludePath>
             </VariousControls>
@@ -394,6 +394,11 @@
               <FileType>1</FileType>
               <FilePath>..\rtthread\3.0.3\libcpu\arm\cortex-m3\cpuport.c</FilePath>
             </File>
+            <File>
+              <FileName>context_rvds.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\rtthread\3.0.3\libcpu\arm\cortex-m3\context_rvds.S</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -408,6 +413,31 @@
               <FileName>scheduler.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\rtthread\3.0.3\src\scheduler.c</FilePath>
+            </File>
+            <File>
+              <FileName>object.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rtthread\3.0.3\src\object.c</FilePath>
+            </File>
+            <File>
+              <FileName>kservice.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rtthread\3.0.3\src\kservice.c</FilePath>
+            </File>
+            <File>
+              <FileName>idle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rtthread\3.0.3\src\idle.c</FilePath>
+            </File>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rtthread\3.0.3\src\clock.c</FilePath>
+            </File>
+            <File>
+              <FileName>irq.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\rtthread\3.0.3\src\irq.c</FilePath>
             </File>
           </Files>
         </Group>

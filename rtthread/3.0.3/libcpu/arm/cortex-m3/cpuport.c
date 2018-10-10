@@ -1,5 +1,14 @@
 #include <rtthread.h>
 
+/* 用于存储上一个线程的栈的sp的指针 */
+rt_uint32_t rt_interrupt_from_thread;
+
+/* 用于存储下一个将要运行的线程的栈的sp的指针 */
+rt_uint32_t rt_interrupt_to_thread;
+
+/* PendSV中断服务函数执行标志 */
+rt_uint32_t rt_thread_switch_interrupt_flag;
+
 struct exception_stack_frame
 {
 	/* 异常发生时，自动加载到CPU寄存器的内容 */
@@ -42,7 +51,7 @@ rt_uint8_t *rt_hw_stack_init(void		*tentry,
 	stk = stack_addr + sizeof(rt_uint32_t);
 
 	/* 让stk指针向下8字节对齐 */
-	stk = (rt_uint8_t)RT_ALIGN_DOWN((rt_uint32_t)stk, 8);
+	stk = (rt_uint8_t *)RT_ALIGN_DOWN((rt_uint32_t)stk, 8);
 
 	/* 让stk指针继续向下移动sizeof(struct stack_frame)个偏移 */
 	stk -= sizeof(struct stack_frame);
