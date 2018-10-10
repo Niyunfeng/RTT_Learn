@@ -132,9 +132,9 @@ void flag1_thread_entry(void *p_arg)
         rt_schedule();
 #else
         flag1 = 1;
-        rt_thread_delay(2);
+        rt_thread_delay(5);
         flag1 = 0;
-        rt_thread_delay(2);
+        rt_thread_delay(5);
 #endif
     }
 }
@@ -154,9 +154,9 @@ void flag2_thread_entry(void *p_arg)
         rt_schedule();
 #else
         flag2 = 1;
-        rt_thread_delay(2);
+        rt_thread_delay(5);
         flag2 = 0;
-        rt_thread_delay(2);
+        rt_thread_delay(5);
 #endif
     }
 }
