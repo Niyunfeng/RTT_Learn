@@ -24,6 +24,8 @@ rt_list_t rt_thread_priority_table[RT_THREAD_PRIORITY_MAX];
 /* 线程休眠列表 */
 rt_list_t rt_thread_defunct;
 
+rt_uint32_t rt_thread_read_priority_group;
+
 
 /*
 *************************************************************************
