@@ -74,6 +74,13 @@ struct rt_thread
 	rt_uint32_t stack_size;				/* 线程栈大小，单位为字节 */
 
 	rt_ubase_t 	remaining_tick;			/* 用于实现阻塞延时 */
+
+	rt_uint8_t  current_priority;		/* 当前优先级 */
+	rt_uint8_t	init_priority;			/* 初始化优先级 */
+	rt_uint32_t number_mask;			/* 当前优先级掩码 */
+
+	rt_err_t	error;					/* 错误码 */
+	rt_uint8_t	stat;					/* 线程的状态 */
 };
 
 typedef struct rt_thread * rt_thread_t;
@@ -84,17 +91,34 @@ typedef struct rt_thread * rt_thread_t;
 ****************************************************
 */
 /* RT-Thread 错误码重定义 */
-#define RT_EOK					0		/**< There is no error */
-#define RT_ERROR				1		/**< A generic error happens */
-#define RT_ETIMEOUT				2		/**< Timed out */
-#define RT_EFULL				3		/**< The resource is full */
-#define RT_EEMPTY				4		/**< The resource is empty */
-#define RT_ENOMEM				5		/**< No memory */
-#define RT_ENOSYS				6		/**< No system */
-#define RT_EBUSY				7		/**< Busy */
-#define RT_EIO  				8		/**< IO error */
-#define RT_EINTR				9		/**< Interrupted system call */
-#define RT_EINVAL				10		/**< Invalid argument */
+#define RT_EOK							0		/**< There is no error */
+#define RT_ERROR						1		/**< A generic error happens */
+#define RT_ETIMEOUT						2		/**< Timed out */
+#define RT_EFULL						3		/**< The resource is full */
+#define RT_EEMPTY						4		/**< The resource is empty */
+#define RT_ENOMEM						5		/**< No memory */
+#define RT_ENOSYS						6		/**< No system */
+#define RT_EBUSY						7		/**< Busy */
+#define RT_EIO  						8		/**< IO error */
+#define RT_EINTR						9		/**< Interrupted system call */
+#define RT_EINVAL						10		/**< Invalid argument */
+
+/*
+ * 线程状态定义
+ */
+#define RT_THREAD_INIT					0x00				/* 初状态 */
+#define RT_THREAD_READY					0x01				/* 就绪态 */
+#define RT_THREAD_SUSPEND				0x02				/* 挂起态 */
+#define RT_THREAD_RUNNING				0x03				/* 运行态 */
+#define RT_THREAD_BLOCK					RT_THREAD_SUSPEND	/* 阻塞态 */
+#define RT_THREAD_CLOSE					0x04				/* 关闭态 */
+#define RT_THREAD_STAT_MASK				0x0f
+
+#define RT_THREAD_STAT_SIGNAL			0x01
+#define RT_THREAD_STAT_SIGNAL_READY		(RT_THREAD_STAT_SIGNAL | RT_THREAD_READY)
+#define RT_THREAD_STAT_SIGNAL_SUSPEND	0x20
+#define RT_THREAD_STAT_SIGNAL_MASK		0xf0
+
 
 enum rt_object_class_type
 {
@@ -124,12 +148,12 @@ struct rt_object
 
 typedef struct rt_object *rt_object_t;
 
-struct rt_object_information
-{
-	enum rt_object_class_type 	type;			/* 对象类型 */
-	rt_list_t					object_list;	/* 对象列表节点头 */
-	rt_size_t					object_size;	/* 对象大小 */
-};
+	struct rt_object_information
+	{
+		enum rt_object_class_type 	type;			/* 对象类型 */
+		rt_list_t					object_list;	/* 对象列表节点头 */
+		rt_size_t					object_size;	/* 对象大小 */
+	};
 
 #endif
 
