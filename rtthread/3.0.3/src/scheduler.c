@@ -204,6 +204,9 @@ void rt_schedule(void)
 				return; /* 返回，不进行切换，因为两个线程都处于延时中 */
 			}
 		}
+    
+  /* 产生上下文切换 */
+	rt_hw_context_switch((rt_uint32_t)&from_thread->sp, (rt_uint32_t)&to_thread->sp);
 	}
 #else
 	rt_base_t level;
@@ -228,6 +231,7 @@ void rt_schedule(void)
 		from_thread 		= rt_current_thread;
 		rt_current_thread   = to_thread;
 
+    /* 产生上下文切换 */
 		rt_hw_context_switch((rt_uint32_t)&from_thread->sp,
 		                     (rt_uint32_t)&to_thread->sp);
 
@@ -240,11 +244,6 @@ void rt_schedule(void)
 		rt_hw_interrupt_enable(level);
 	}
 #endif
-
-
-	/* 产生上下文切换 */
-	rt_hw_context_switch((rt_uint32_t)&from_thread->sp, (rt_uint32_t)&to_thread->sp);
-
 }
 
 void rt_schedule_insert_thread(struct rt_thread *thread)
@@ -259,13 +258,14 @@ void rt_schedule_insert_thread(struct rt_thread *thread)
 
 	/* 将线程插入到就绪列表 */
 	rt_list_insert_before(&(rt_thread_priority_table[thread->current_priority]),
-	                      &(thread->tlist));
+                          &(thread->tlist));
 
 	/* 设置线程就绪优先级组中对应的位 */
-	rt_thread_ready_priority_group |= thread->number_mask;
+	rt_thread_ready_priority_group |=  thread->number_mask;
 
 	/* 开中断*/
 	rt_hw_interrupt_enable(temp);
+	
 }
 
 void rt_schedule_remove_thread(struct rt_thread *thread)
@@ -276,13 +276,13 @@ void rt_schedule_remove_thread(struct rt_thread *thread)
 	temp = rt_hw_interrupt_disable();
 
 	/* 将线程从就绪列表中删除 */
-	rt_list_remove(&(thread->tlist));
+	rt_list_remove(&(thread->list));
 
 	/* 将线程就绪优先级组员的位清除 */
-	if (rt_list_isempty(&(rt_thread_priority_table[thread->current_priority])))
+	if(rt_list_isempty(&(rt_thread_priority_table[thread->current_priority])))
 	{
 		rt_thread_ready_priority_group &= ~thread->number_mask;
-	}
+	}	
 
 	/* 开中断 */
 	rt_hw_interrupt_enable(temp);

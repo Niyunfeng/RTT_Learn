@@ -32,7 +32,7 @@
 [30]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[30]"><\/a>__rt_entry_li<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000A))$/;"	a
 [31]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[31]"><\/a>__rt_lib_init<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))$/;"	a
 [32]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[32]"><\/a>__rt_entry_main<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))$/;"	a
-[33]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[33]"><\/a>main<\/STRONG> (Thumb, 164 bytes, Stack size 24 bytes, main.o(i.main))$/;"	a
+[33]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[33]"><\/a>main<\/STRONG> (Thumb, 160 bytes, Stack size 24 bytes, main.o(i.main))$/;"	a
 [34]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[34]"><\/a>exit<\/STRONG> (Thumb, 18 bytes, Stack size 8 bytes, exit.o(.text))$/;"	a
 [35]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[35]"><\/a>__rt_exit_ls<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000003))$/;"	a
 [36]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[36]"><\/a>__rt_lib_shutdown<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))$/;"	a
@@ -43,70 +43,74 @@
 [3a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[3a]"><\/a>__user_initial_stackheap<\/STRONG> (Thumb, 10 bytes, Stack size 0 bytes, startup_armcm3.o(.text))$/;"	a
 [3b]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[3b]"><\/a>__rt_exit<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))$/;"	a
 [3c]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[3c]"><\/a>rt_interrupt_enter<\/STRONG> (Thumb, 26 bytes, Stack size 8 bytes, irq.o(i.rt_interrupt_enter))$/;"	a
-[3d]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[3d]"><\/a>rt_tick_increase<\/STRONG> (Thumb, 48 bytes, Stack size 16 bytes, clock.o(i.rt_tick_increase))$/;"	a
+[3d]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[3d]"><\/a>rt_tick_increase<\/STRONG> (Thumb, 64 bytes, Stack size 16 bytes, clock.o(i.rt_tick_increase))$/;"	a
 [3e]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[3e]"><\/a>rt_interrupt_leave<\/STRONG> (Thumb, 26 bytes, Stack size 8 bytes, irq.o(i.rt_interrupt_leave))$/;"	a
-[3f]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[3f]"><\/a>rt_thread_delay<\/STRONG> (Thumb, 16 bytes, Stack size 16 bytes, thread.o(i.rt_thread_delay))$/;"	a
+[3f]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[3f]"><\/a>rt_thread_delay<\/STRONG> (Thumb, 46 bytes, Stack size 16 bytes, thread.o(i.rt_thread_delay))$/;"	a
 [40]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[40]"><\/a>rt_hw_interrupt_disable<\/STRONG> (Thumb, 8 bytes, Stack size 0 bytes, context_rvds.o(.text))$/;"	a
-[41]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[41]"><\/a>rt_system_scheduler_init<\/STRONG> (Thumb, 34 bytes, Stack size 0 bytes, scheduler.o(i.rt_system_scheduler_init))$/;"	a
-[42]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[42]"><\/a>rt_thread_idle_init<\/STRONG> (Thumb, 46 bytes, Stack size 16 bytes, idle.o(i.rt_thread_idle_init))$/;"	a
-[43]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[43]"><\/a>rt_thread_init<\/STRONG> (Thumb, 72 bytes, Stack size 32 bytes, thread.o(i.rt_thread_init))$/;"	a
-[44]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[44]"><\/a>rt_list_insert_before<\/STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(i.rt_list_insert_before))$/;"	a
-[45]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[45]"><\/a>rt_system_scheduler_start<\/STRONG> (Thumb, 24 bytes, Stack size 8 bytes, scheduler.o(i.rt_system_scheduler_start))$/;"	a
+[41]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[41]"><\/a>rt_system_scheduler_init<\/STRONG> (Thumb, 44 bytes, Stack size 0 bytes, scheduler.o(i.rt_system_scheduler_init))$/;"	a
+[42]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[42]"><\/a>rt_thread_idle_init<\/STRONG> (Thumb, 36 bytes, Stack size 16 bytes, idle.o(i.rt_thread_idle_init))$/;"	a
+[43]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[43]"><\/a>rt_thread_init<\/STRONG> (Thumb, 92 bytes, Stack size 32 bytes, thread.o(i.rt_thread_init))$/;"	a
+[44]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[44]"><\/a>rt_thread_startup<\/STRONG> (Thumb, 44 bytes, Stack size 8 bytes, thread.o(i.rt_thread_startup))$/;"	a
+[45]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[45]"><\/a>rt_system_scheduler_start<\/STRONG> (Thumb, 36 bytes, Stack size 16 bytes, scheduler.o(i.rt_system_scheduler_start))$/;"	a
 [46]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[46]"><\/a>rt_hw_interrupt_enable<\/STRONG> (Thumb, 6 bytes, Stack size 0 bytes, context_rvds.o(.text))$/;"	a
 [47]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[47]"><\/a>rt_object_init<\/STRONG> (Thumb, 70 bytes, Stack size 24 bytes, object.o(i.rt_object_init))$/;"	a
 [48]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[48]"><\/a>rt_object_get_infomation<\/STRONG> (Thumb, 36 bytes, Stack size 0 bytes, object.o(i.rt_object_get_infomation))$/;"	a
 [49]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[49]"><\/a>rt_strncpy<\/STRONG> (Thumb, 52 bytes, Stack size 16 bytes, kservice.o(i.rt_strncpy))$/;"	a
 [4]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4]"><\/a>NMI_Handler<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_armcm3.o(.text))$/;"	a
-[4a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4a]"><\/a>rt_schedule<\/STRONG> (Thumb, 154 bytes, Stack size 16 bytes, scheduler.o(i.rt_schedule))$/;"	a
-[4b]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4b]"><\/a>rt_hw_context_switch<\/STRONG> (Thumb, 32 bytes, Stack size 0 bytes, context_rvds.o(.text))$/;"	a
-[4c]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4c]"><\/a>rt_hw_context_switch_to<\/STRONG> (Thumb, 48 bytes, Stack size 0 bytes, context_rvds.o(.text))$/;"	a
-[4d]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4d]"><\/a>rt_hw_stack_init<\/STRONG> (Thumb, 58 bytes, Stack size 20 bytes, cpuport.o(i.rt_hw_stack_init))$/;"	a
-[4e]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4e]"><\/a>__scatterload_rt2_thumb_only<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)$/;"	a
-[4f]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4f]"><\/a>__scatterload_null<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)$/;"	a
-[50]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[50]"><\/a>__scatterload_zeroinit<\/STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)$/;"	a
-[51]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[51]"><\/a>__rt_lib_init_alloca_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))$/;"	a
-[52]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[52]"><\/a>__rt_lib_init_argv_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))$/;"	a
-[53]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[53]"><\/a>__rt_lib_init_atexit_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))$/;"	a
-[54]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[54]"><\/a>__rt_lib_init_clock_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))$/;"	a
-[55]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[55]"><\/a>__rt_lib_init_cpp_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))$/;"	a
-[56]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[56]"><\/a>__rt_lib_init_exceptions_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))$/;"	a
-[57]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[57]"><\/a>__rt_lib_init_fp_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))$/;"	a
-[58]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[58]"><\/a>__rt_lib_init_fp_trap_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))$/;"	a
-[59]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[59]"><\/a>__rt_lib_init_getenv_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))$/;"	a
+[4a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4a]"><\/a>rt_schedule<\/STRONG> (Thumb, 90 bytes, Stack size 24 bytes, scheduler.o(i.rt_schedule))$/;"	a
+[4b]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4b]"><\/a>__rt_ffs<\/STRONG> (Thumb, 70 bytes, Stack size 0 bytes, kservice.o(i.__rt_ffs))$/;"	a
+[4c]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4c]"><\/a>rt_hw_context_switch<\/STRONG> (Thumb, 32 bytes, Stack size 0 bytes, context_rvds.o(.text))$/;"	a
+[4d]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4d]"><\/a>rt_schedule_insert_thread<\/STRONG> (Thumb, 64 bytes, Stack size 16 bytes, scheduler.o(i.rt_schedule_insert_thread))$/;"	a
+[4e]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4e]"><\/a>rt_hw_context_switch_to<\/STRONG> (Thumb, 48 bytes, Stack size 0 bytes, context_rvds.o(.text))$/;"	a
+[4f]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[4f]"><\/a>rt_hw_stack_init<\/STRONG> (Thumb, 58 bytes, Stack size 20 bytes, cpuport.o(i.rt_hw_stack_init))$/;"	a
+[50]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[50]"><\/a>rt_thread_resume<\/STRONG> (Thumb, 66 bytes, Stack size 16 bytes, thread.o(i.rt_thread_resume))$/;"	a
+[51]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[51]"><\/a>rt_thread_self<\/STRONG> (Thumb, 6 bytes, Stack size 0 bytes, thread.o(i.rt_thread_self))$/;"	a
+[52]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[52]"><\/a>__scatterload_rt2_thumb_only<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)$/;"	a
+[53]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[53]"><\/a>__scatterload_null<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)$/;"	a
+[54]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[54]"><\/a>__scatterload_zeroinit<\/STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)$/;"	a
+[55]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[55]"><\/a>__rt_lib_init_alloca_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))$/;"	a
+[56]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[56]"><\/a>__rt_lib_init_argv_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))$/;"	a
+[57]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[57]"><\/a>__rt_lib_init_atexit_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))$/;"	a
+[58]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[58]"><\/a>__rt_lib_init_clock_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))$/;"	a
+[59]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[59]"><\/a>__rt_lib_init_cpp_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))$/;"	a
 [5]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5]"><\/a>HardFault_Handler<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_armcm3.o(.text))$/;"	a
-[5a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5a]"><\/a>__rt_lib_init_heap_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))$/;"	a
-[5b]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5b]"><\/a>__rt_lib_init_lc_collate_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))$/;"	a
-[5c]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5c]"><\/a>__rt_lib_init_lc_ctype_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))$/;"	a
-[5d]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5d]"><\/a>__rt_lib_init_lc_monetary_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))$/;"	a
-[5e]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5e]"><\/a>__rt_lib_init_lc_numeric_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))$/;"	a
-[5f]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5f]"><\/a>__rt_lib_init_lc_time_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))$/;"	a
-[60]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[60]"><\/a>__rt_lib_init_preinit_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))$/;"	a
-[61]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[61]"><\/a>__rt_lib_init_rand_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))$/;"	a
-[62]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[62]"><\/a>__rt_lib_init_return<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))$/;"	a
-[63]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[63]"><\/a>__rt_lib_init_signal_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))$/;"	a
-[64]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[64]"><\/a>__rt_lib_init_stdio_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))$/;"	a
-[65]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[65]"><\/a>__rt_lib_init_user_alloc_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))$/;"	a
-[66]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[66]"><\/a>__rt_lib_shutdown_cpp_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))$/;"	a
-[67]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[67]"><\/a>__rt_lib_shutdown_fp_trap_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))$/;"	a
-[68]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[68]"><\/a>__rt_lib_shutdown_heap_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))$/;"	a
-[69]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[69]"><\/a>__rt_lib_shutdown_return<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))$/;"	a
+[5a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5a]"><\/a>__rt_lib_init_exceptions_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))$/;"	a
+[5b]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5b]"><\/a>__rt_lib_init_fp_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))$/;"	a
+[5c]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5c]"><\/a>__rt_lib_init_fp_trap_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))$/;"	a
+[5d]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5d]"><\/a>__rt_lib_init_getenv_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))$/;"	a
+[5e]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5e]"><\/a>__rt_lib_init_heap_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))$/;"	a
+[5f]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[5f]"><\/a>__rt_lib_init_lc_collate_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))$/;"	a
+[60]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[60]"><\/a>__rt_lib_init_lc_ctype_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))$/;"	a
+[61]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[61]"><\/a>__rt_lib_init_lc_monetary_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))$/;"	a
+[62]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[62]"><\/a>__rt_lib_init_lc_numeric_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))$/;"	a
+[63]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[63]"><\/a>__rt_lib_init_lc_time_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))$/;"	a
+[64]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[64]"><\/a>__rt_lib_init_preinit_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))$/;"	a
+[65]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[65]"><\/a>__rt_lib_init_rand_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))$/;"	a
+[66]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[66]"><\/a>__rt_lib_init_return<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))$/;"	a
+[67]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[67]"><\/a>__rt_lib_init_signal_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))$/;"	a
+[68]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[68]"><\/a>__rt_lib_init_stdio_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))$/;"	a
+[69]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[69]"><\/a>__rt_lib_init_user_alloc_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))$/;"	a
 [6]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6]"><\/a>MemManage_Handler<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_armcm3.o(.text))$/;"	a
-[6a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6a]"><\/a>__rt_lib_shutdown_signal_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))$/;"	a
-[6b]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6b]"><\/a>__rt_lib_shutdown_stdio_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))$/;"	a
-[6c]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6c]"><\/a>__rt_lib_shutdown_user_alloc_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))$/;"	a
-[6d]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6d]"><\/a>__rt_entry_presh_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))$/;"	a
-[6e]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6e]"><\/a>__rt_entry_postsh_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))$/;"	a
-[6f]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6f]"><\/a>__rt_entry_postli_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))$/;"	a
-[70]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[70]"><\/a>__rt_exit_prels_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))$/;"	a
-[71]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[71]"><\/a>__use_two_region_memory<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)$/;"	a
-[72]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[72]"><\/a>__rt_heap_escrow$2region<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)$/;"	a
-[73]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[73]"><\/a>__rt_heap_expand$2region<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)$/;"	a
-[74]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[74]"><\/a>__user_libspace<\/STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)$/;"	a
-[75]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[75]"><\/a>__user_perthread_libspace<\/STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)$/;"	a
-[76]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[76]"><\/a>__I$use$semihosting<\/STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)$/;"	a
-[77]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[77]"><\/a>__use_no_semihosting_swi<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)$/;"	a
-[78]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[78]"><\/a>__semihosting_library_function<\/STRONG> (Thumb, 0 bytes, Stack size 8 bytes, indicate_semi.o(.text), UNUSED)$/;"	a
+[6a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6a]"><\/a>__rt_lib_shutdown_cpp_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))$/;"	a
+[6b]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6b]"><\/a>__rt_lib_shutdown_fp_trap_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))$/;"	a
+[6c]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6c]"><\/a>__rt_lib_shutdown_heap_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))$/;"	a
+[6d]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6d]"><\/a>__rt_lib_shutdown_return<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))$/;"	a
+[6e]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6e]"><\/a>__rt_lib_shutdown_signal_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))$/;"	a
+[6f]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[6f]"><\/a>__rt_lib_shutdown_stdio_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))$/;"	a
+[70]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[70]"><\/a>__rt_lib_shutdown_user_alloc_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))$/;"	a
+[71]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[71]"><\/a>__rt_entry_presh_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))$/;"	a
+[72]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[72]"><\/a>__rt_entry_postsh_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))$/;"	a
+[73]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[73]"><\/a>__rt_entry_postli_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))$/;"	a
+[74]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[74]"><\/a>__rt_exit_prels_1<\/STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))$/;"	a
+[75]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[75]"><\/a>__use_two_region_memory<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)$/;"	a
+[76]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[76]"><\/a>__rt_heap_escrow$2region<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)$/;"	a
+[77]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[77]"><\/a>__rt_heap_expand$2region<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)$/;"	a
+[78]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[78]"><\/a>__user_libspace<\/STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)$/;"	a
+[79]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[79]"><\/a>__user_perthread_libspace<\/STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)$/;"	a
 [7]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[7]"><\/a>BusFault_Handler<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_armcm3.o(.text))$/;"	a
+[7a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[7a]"><\/a>__I$use$semihosting<\/STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)$/;"	a
+[7b]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[7b]"><\/a>__use_no_semihosting_swi<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)$/;"	a
+[7c]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[7c]"><\/a>__semihosting_library_function<\/STRONG> (Thumb, 0 bytes, Stack size 8 bytes, indicate_semi.o(.text), UNUSED)$/;"	a
 [8]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[8]"><\/a>UsageFault_Handler<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_armcm3.o(.text))$/;"	a
 [9]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[9]"><\/a>SVC_Handler<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_armcm3.o(.text))$/;"	a
 [a]	Project\Objects\rtt_.htm	/^<P><STRONG><a name="[a]"><\/a>DebugMon_Handler<\/STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_armcm3.o(.text))$/;"	a
@@ -186,17 +190,17 @@ ALIGN	rtthread\3.0.3\include\rtdef.h	40;"	d
 ALIGN	rtthread\3.0.3\include\rtdef.h	44;"	d
 RT_ALIGN	rtthread\3.0.3\include\rtdef.h	49;"	d
 RT_ALIGN_DOWN	rtthread\3.0.3\include\rtdef.h	50;"	d
-RT_EBUSY	rtthread\3.0.3\include\rtdef.h	94;"	d
-RT_EEMPTY	rtthread\3.0.3\include\rtdef.h	91;"	d
-RT_EFULL	rtthread\3.0.3\include\rtdef.h	90;"	d
-RT_EINTR	rtthread\3.0.3\include\rtdef.h	96;"	d
-RT_EINVAL	rtthread\3.0.3\include\rtdef.h	97;"	d
-RT_EIO	rtthread\3.0.3\include\rtdef.h	95;"	d
-RT_ENOMEM	rtthread\3.0.3\include\rtdef.h	92;"	d
-RT_ENOSYS	rtthread\3.0.3\include\rtdef.h	93;"	d
-RT_EOK	rtthread\3.0.3\include\rtdef.h	87;"	d
-RT_ERROR	rtthread\3.0.3\include\rtdef.h	88;"	d
-RT_ETIMEOUT	rtthread\3.0.3\include\rtdef.h	89;"	d
+RT_EBUSY	rtthread\3.0.3\include\rtdef.h	101;"	d
+RT_EEMPTY	rtthread\3.0.3\include\rtdef.h	98;"	d
+RT_EFULL	rtthread\3.0.3\include\rtdef.h	97;"	d
+RT_EINTR	rtthread\3.0.3\include\rtdef.h	103;"	d
+RT_EINVAL	rtthread\3.0.3\include\rtdef.h	104;"	d
+RT_EIO	rtthread\3.0.3\include\rtdef.h	102;"	d
+RT_ENOMEM	rtthread\3.0.3\include\rtdef.h	99;"	d
+RT_ENOSYS	rtthread\3.0.3\include\rtdef.h	100;"	d
+RT_EOK	rtthread\3.0.3\include\rtdef.h	94;"	d
+RT_ERROR	rtthread\3.0.3\include\rtdef.h	95;"	d
+RT_ETIMEOUT	rtthread\3.0.3\include\rtdef.h	96;"	d
 RT_FALSE	rtthread\3.0.3\include\rtdef.h	32;"	d
 RT_NULL	rtthread\3.0.3\include\rtdef.h	52;"	d
 RT_Object_Class_Device	rtthread\3.0.3\include\rtdef.h	/^	RT_Object_Class_Device,				\/* 对象是设备 *\/$/;"	e	enum:rt_object_class_type
@@ -212,18 +216,33 @@ RT_Object_Class_Thread	rtthread\3.0.3\include\rtdef.h	/^	RT_Object_Class_Thread 
 RT_Object_Class_Timer	rtthread\3.0.3\include\rtdef.h	/^	RT_Object_Class_Timer,				\/* 对象是定时器 *\/$/;"	e	enum:rt_object_class_type
 RT_Object_Class_Unkown	rtthread\3.0.3\include\rtdef.h	/^	RT_Object_Class_Unkown,				\/* 对象未知 *\/$/;"	e	enum:rt_object_class_type
 RT_Objetc_Class_MessageQueue	rtthread\3.0.3\include\rtdef.h	/^	RT_Objetc_Class_MessageQueue,		\/* 对象是消息队列 *\/$/;"	e	enum:rt_object_class_type
+RT_THREAD_BLOCK	rtthread\3.0.3\include\rtdef.h	113;"	d
+RT_THREAD_CLOSE	rtthread\3.0.3\include\rtdef.h	114;"	d
+RT_THREAD_INIT	rtthread\3.0.3\include\rtdef.h	109;"	d
+RT_THREAD_READY	rtthread\3.0.3\include\rtdef.h	110;"	d
+RT_THREAD_RUNNING	rtthread\3.0.3\include\rtdef.h	112;"	d
+RT_THREAD_STAT_MASK	rtthread\3.0.3\include\rtdef.h	115;"	d
+RT_THREAD_STAT_SIGNAL	rtthread\3.0.3\include\rtdef.h	117;"	d
+RT_THREAD_STAT_SIGNAL_MASK	rtthread\3.0.3\include\rtdef.h	120;"	d
+RT_THREAD_STAT_SIGNAL_READY	rtthread\3.0.3\include\rtdef.h	118;"	d
+RT_THREAD_STAT_SIGNAL_SUSPEND	rtthread\3.0.3\include\rtdef.h	119;"	d
+RT_THREAD_SUSPEND	rtthread\3.0.3\include\rtdef.h	111;"	d
 RT_TRUE	rtthread\3.0.3\include\rtdef.h	31;"	d
 __RT_DEF_H__	rtthread\3.0.3\include\rtdef.h	2;"	d
+current_priority	rtthread\3.0.3\include\rtdef.h	/^	rt_uint8_t  current_priority;		\/* 当前优先级 *\/$/;"	m	struct:rt_thread
 entry	rtthread\3.0.3\include\rtdef.h	/^	void		*entry;		    		\/* 线程入口地址 *\/$/;"	m	struct:rt_thread
+error	rtthread\3.0.3\include\rtdef.h	/^	rt_err_t	error;					\/* 错误码 *\/$/;"	m	struct:rt_thread
 flag	rtthread\3.0.3\include\rtdef.h	/^	rt_uint8_t 	flag;					\/* 内核对象的状态 *\/$/;"	m	struct:rt_object
 flag	rtthread\3.0.3\include\rtdef.h	/^	rt_uint8_t 	flag;					\/* 内核对象的状态 *\/$/;"	m	struct:rt_thread
+init_priority	rtthread\3.0.3\include\rtdef.h	/^	rt_uint8_t	init_priority;			\/* 初始化优先级 *\/$/;"	m	struct:rt_thread
 list	rtthread\3.0.3\include\rtdef.h	/^	rt_list_t 	list;					\/* 内核对象的列表节点 *\/$/;"	m	struct:rt_object
 list	rtthread\3.0.3\include\rtdef.h	/^	rt_list_t 	list;					\/* 内核对象的列表节点 *\/$/;"	m	struct:rt_thread
 name	rtthread\3.0.3\include\rtdef.h	/^	char 		name[RT_NAME_MAX];		\/* 内核对象的名字 *\/$/;"	m	struct:rt_object
 name	rtthread\3.0.3\include\rtdef.h	/^	char 		name[RT_NAME_MAX];		\/* 内核对象的名字 *\/$/;"	m	struct:rt_thread
 next	rtthread\3.0.3\include\rtdef.h	/^	struct rt_list_node *next;			\/* 指向后一个节点 *\/$/;"	m	struct:rt_list_node	typeref:struct:rt_list_node::rt_list_node
-object_list	rtthread\3.0.3\include\rtdef.h	/^	rt_list_t					object_list;	\/* 对象列表节点头 *\/$/;"	m	struct:rt_object_information
-object_size	rtthread\3.0.3\include\rtdef.h	/^	rt_size_t					object_size;	\/* 对象大小 *\/$/;"	m	struct:rt_object_information
+number_mask	rtthread\3.0.3\include\rtdef.h	/^	rt_uint32_t number_mask;			\/* 当前优先级掩码 *\/$/;"	m	struct:rt_thread
+object_list	rtthread\3.0.3\include\rtdef.h	/^		rt_list_t					object_list;	\/* 对象列表节点头 *\/$/;"	m	struct:rt_object_information
+object_size	rtthread\3.0.3\include\rtdef.h	/^		rt_size_t					object_size;	\/* 对象大小 *\/$/;"	m	struct:rt_object_information
 parameter	rtthread\3.0.3\include\rtdef.h	/^	void 		*parameter;	    		\/* 线程形参 *\/$/;"	m	struct:rt_thread
 prev	rtthread\3.0.3\include\rtdef.h	/^	struct rt_list_node *prev;			\/* 指向前一个节点 *\/$/;"	m	struct:rt_list_node	typeref:struct:rt_list_node::rt_list_node
 remaining_tick	rtthread\3.0.3\include\rtdef.h	/^	rt_ubase_t 	remaining_tick;			\/* 用于实现阻塞延时 *\/$/;"	m	struct:rt_thread
@@ -242,7 +261,7 @@ rt_list_node	rtthread\3.0.3\include\rtdef.h	/^struct rt_list_node$/;"	s
 rt_list_t	rtthread\3.0.3\include\rtdef.h	/^typedef struct rt_list_node rt_list_t;$/;"	t	typeref:struct:rt_list_node
 rt_object	rtthread\3.0.3\include\rtdef.h	/^struct rt_object$/;"	s
 rt_object_class_type	rtthread\3.0.3\include\rtdef.h	/^enum rt_object_class_type$/;"	g
-rt_object_information	rtthread\3.0.3\include\rtdef.h	/^struct rt_object_information$/;"	s
+rt_object_information	rtthread\3.0.3\include\rtdef.h	/^	struct rt_object_information$/;"	s
 rt_object_t	rtthread\3.0.3\include\rtdef.h	/^typedef struct rt_object *rt_object_t;$/;"	t	typeref:struct:rt_object
 rt_off_t	rtthread\3.0.3\include\rtdef.h	/^typedef rt_base_t 			    rt_off_t;$/;"	t
 rt_size_t	rtthread\3.0.3\include\rtdef.h	/^typedef rt_ubase_t 			    rt_size_t;$/;"	t
@@ -257,8 +276,9 @@ rt_uint8_t	rtthread\3.0.3\include\rtdef.h	/^typedef unsigned char 		    rt_uint8
 sp	rtthread\3.0.3\include\rtdef.h	/^	void 		*sp;		    		\/* 线程栈指针 *\/$/;"	m	struct:rt_thread
 stack_addr	rtthread\3.0.3\include\rtdef.h	/^	void		*stack_addr;    		\/* 线程栈起始地址 *\/$/;"	m	struct:rt_thread
 stack_size	rtthread\3.0.3\include\rtdef.h	/^	rt_uint32_t stack_size;				\/* 线程栈大小，单位为字节 *\/$/;"	m	struct:rt_thread
+stat	rtthread\3.0.3\include\rtdef.h	/^	rt_uint8_t	stat;					\/* 线程的状态 *\/$/;"	m	struct:rt_thread
 tlist	rtthread\3.0.3\include\rtdef.h	/^	rt_list_t	tlist;					\/* 线程链表节点 *\/$/;"	m	struct:rt_thread
-type	rtthread\3.0.3\include\rtdef.h	/^	enum rt_object_class_type 	type;			\/* 对象类型 *\/$/;"	m	struct:rt_object_information	typeref:enum:rt_object_information::rt_object_class_type
+type	rtthread\3.0.3\include\rtdef.h	/^		enum rt_object_class_type 	type;			\/* 对象类型 *\/$/;"	m	struct:rt_object_information	typeref:enum:rt_object_information::rt_object_class_type
 type	rtthread\3.0.3\include\rtdef.h	/^	rt_uint8_t  type;					\/* 内核对象的类型 *\/$/;"	m	struct:rt_object
 type	rtthread\3.0.3\include\rtdef.h	/^	rt_uint8_t  type;					\/* 内核对象的类型 *\/$/;"	m	struct:rt_thread
 __RT_HW_H__	rtthread\3.0.3\include\rthw.h	2;"	d
@@ -268,6 +288,7 @@ rt_list_entry	rtthread\3.0.3\include\rtservice.h	8;"	d
 rt_list_init	rtthread\3.0.3\include\rtservice.h	/^rt_inline void rt_list_init(rt_list_t *l)$/;"	f
 rt_list_insert_after	rtthread\3.0.3\include\rtservice.h	/^rt_inline void rt_list_insert_after(rt_list_t *l, rt_list_t *n)$/;"	f
 rt_list_insert_before	rtthread\3.0.3\include\rtservice.h	/^rt_inline void rt_list_insert_before(rt_list_t *l, rt_list_t *n)$/;"	f
+rt_list_isempty	rtthread\3.0.3\include\rtservice.h	/^rt_inline int rt_list_isempty(const rt_list_t *l)$/;"	f
 rt_list_remove	rtthread\3.0.3\include\rtservice.h	/^rt_inline void rt_list_remove(rt_list_t *n)$/;"	f
 NVIC_INT_CTRL	rtthread\3.0.3\libcpu\arm\cortex-m3\context_rvds.S	/^NVIC_INT_CTRL   EQU     0xE000ED04     ; 中断控制状态寄存器$/;"	d
 NVIC_PENDSVSET	rtthread\3.0.3\libcpu\arm\cortex-m3\context_rvds.S	/^NVIC_PENDSVSET  EQU     0x10000000     ; 触发PendSV exception的值$/;"	d
@@ -337,15 +358,21 @@ rt_object_get_infomation	rtthread\3.0.3\src\object.c	/^rt_object_get_infomation(
 rt_object_info_type	rtthread\3.0.3\src\object.c	/^enum rt_object_info_type$/;"	g	file:
 rt_object_init	rtthread\3.0.3\src\object.c	/^void rt_object_init(struct rt_object 			*object,$/;"	f
 __RT_THREAD_H__	rtthread\3.0.3\src\rtthread.h	2;"	d
+rt_current_priority	rtthread\3.0.3\src\scheduler.c	/^rt_uint8_t rt_current_priority;$/;"	v
 rt_current_thread	rtthread\3.0.3\src\scheduler.c	/^struct rt_thread *rt_current_thread;$/;"	v	typeref:struct:rt_thread
 rt_schedule	rtthread\3.0.3\src\scheduler.c	/^void rt_schedule(void)$/;"	f
+rt_schedule_insert_thread	rtthread\3.0.3\src\scheduler.c	/^void rt_schedule_insert_thread(struct rt_thread *thread)$/;"	f
+rt_schedule_remove_thread	rtthread\3.0.3\src\scheduler.c	/^void rt_schedule_remove_thread(struct rt_thread *thread)$/;"	f
 rt_system_scheduler_init	rtthread\3.0.3\src\scheduler.c	/^void rt_system_scheduler_init(void)$/;"	f
 rt_system_scheduler_start	rtthread\3.0.3\src\scheduler.c	/^void rt_system_scheduler_start(void)$/;"	f
 rt_thread_defunct	rtthread\3.0.3\src\scheduler.c	/^rt_list_t rt_thread_defunct;$/;"	v
 rt_thread_priority_table	rtthread\3.0.3\src\scheduler.c	/^rt_list_t rt_thread_priority_table[RT_THREAD_PRIORITY_MAX];$/;"	v
-rt_thread_read_priority_group	rtthread\3.0.3\src\scheduler.c	/^rt_uint32_t rt_thread_read_priority_group;$/;"	v
+rt_thread_ready_priority_group	rtthread\3.0.3\src\scheduler.c	/^rt_uint32_t rt_thread_ready_priority_group;$/;"	v
 rt_thread_delay	rtthread\3.0.3\src\thread.c	/^void rt_thread_delay(rt_tick_t tick)$/;"	f
 rt_thread_init	rtthread\3.0.3\src\thread.c	/^rt_err_t rt_thread_init(struct rt_thread *thread,$/;"	f
+rt_thread_resume	rtthread\3.0.3\src\thread.c	/^rt_err_t rt_thread_resume(rt_thread_t thread)$/;"	f
+rt_thread_self	rtthread\3.0.3\src\thread.c	/^rt_thread_t rt_thread_self(void)$/;"	f
+rt_thread_startup	rtthread\3.0.3\src\thread.c	/^rt_err_t rt_thread_startup(rt_thread_t thread)$/;"	f
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_PROGRAM_VERSION	5.8	//

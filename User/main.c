@@ -83,7 +83,7 @@ int main(void)
 	                RT_NULL,                                                            /* 线程形参 */
 	                &rt_flag1_thread_stack[0],                                          /* 线程栈起始地址 */
 	                sizeof(rt_flag1_thread_stack),                                      /* 线程栈大小，单位为字节 */
-                    2);                                                                 /* 优先级 */
+                  2);                                                                 /* 优先级 */
 
 	/* 将线程插入到就绪列表 */
 	// rt_list_insert_before( &(rt_thread_priority_table[0]), &(rt_flag1_thread.tlist) );
@@ -96,7 +96,7 @@ int main(void)
 	                RT_NULL,                                                            /* 线程形参 */
 	                &rt_flag2_thread_stack[0],                                          /* 线程栈起始地址 */
 	                sizeof(rt_flag2_thread_stack),                                      /* 线程栈大小，单位为字节 */
-                    3);                                                                 /* 优先级 */
+                  3);                                                                 /* 优先级 */
 	/* 将线程插入到就绪列表 */
 	// rt_list_insert_before( &(rt_thread_priority_table[1]), &(rt_flag2_thread.tlist) );
 	rt_thread_startup(&rt_flag2_thread);
