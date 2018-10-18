@@ -90,7 +90,8 @@ int main(void)
 	                RT_NULL,                                                            /* 线程形参 */
 	                &rt_flag1_thread_stack[0],                                          /* 线程栈起始地址 */
 	                sizeof(rt_flag1_thread_stack),                                      /* 线程栈大小，单位为字节 */
-	                2);                                                                 /* 优先级 */
+	                2,																	/* 优先级 */
+	                4);                                                                 /* 时间片 */
 
 	/* 将线程插入到就绪列表 */
 	// rt_list_insert_before( &(rt_thread_priority_table[0]), &(rt_flag1_thread.tlist) );
@@ -103,19 +104,21 @@ int main(void)
 	                RT_NULL,                                                            /* 线程形参 */
 	                &rt_flag2_thread_stack[0],                                          /* 线程栈起始地址 */
 	                sizeof(rt_flag2_thread_stack),                                      /* 线程栈大小，单位为字节 */
-	                3);                                                                 /* 优先级 */
+	                3,                                                                 	/* 优先级 */
+	                2);																	/* 时间片 */
 	/* 将线程插入到就绪列表 */
 	// rt_list_insert_before( &(rt_thread_priority_table[1]), &(rt_flag2_thread.tlist) );
 	rt_thread_startup(&rt_flag2_thread);
 
 	/* 将线程插入到就绪列表 */
-	rt_thread_init( &rt_flag3_thread,
-	                "rt_flag3_thread",
-	                flag3_thread_entry,
-	                RT_NULL,
-	                &rt_flag3_thread_stack[0],
-	                sizeof(rt_flag3_thread_stack),
-	                4);
+	rt_thread_init( &rt_flag3_thread,                                                   /* 线程控制块 */
+	                "flag3_thread",                                                     /* 线程名字，字符串形式 */
+	                flag3_thread_entry,                                                 /* 线程入口地址 */
+	                RT_NULL,                                                            /* 线程形参 */
+	                &rt_flag3_thread_stack[0],                                          /* 线程栈起始地址 */
+	                sizeof(rt_flag3_thread_stack),                                      /* 线程栈大小，单位为字节 */
+	                3,                                                                 	/* 优先级 */
+	                3);																	/* 时间片 */
 	/* 将线程插入到就绪列表 */
 	rt_thread_startup(&rt_flag3_thread);
 
@@ -136,10 +139,10 @@ void delay (rt_uint32_t count)
 }
 
 /* 线程1 */
-void flag1_thread_entry(void *p_arg)
+void flag1_thread_entry( void *p_arg)
 {
 
-	for (;;)
+	for ( ;;)
 	{
 		flag1 = 1;
 		rt_thread_delay(4);
@@ -149,9 +152,9 @@ void flag1_thread_entry(void *p_arg)
 }
 
 /* 线程2 */
-void flag2_thread_entry(void *p_arg)
+void flag2_thread_entry( void *p_arg)
 {
-	for (;;)
+	for (;; )
 	{
 		flag2 = 1;
 		rt_thread_delay(2);
@@ -171,6 +174,7 @@ void flag3_thread_entry( void *p_arg)
 		rt_thread_delay(3);
 	}
 }
+
 
 void SysTick_Handler(void)
 {

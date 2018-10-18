@@ -28,15 +28,33 @@ void rt_tick_increase(void)
 			}
 		}
 	}
-    
+
 	/* 系统调度 */
 	rt_schedule();
 }
 #else
 void rt_tick_increase(void)
 {
+    struct rt_thread *thread;
+    
 	/* 系统时基计数器加1操作，rt_tick 是一个全局变量 */
 	++ rt_tick;
+
+	/* 获取当前线程控制块 */
+	thread = rt_thread_self();
+
+	/* 时间片递减 */
+	-- thread->remaining_tick;
+
+	/* 如果时间片用完，则重置时间片，然后让出处理器 */
+	if (thread->remaining_tick == 0)
+	{
+		/* 重置时间片 */
+		thread->remaining_tick = thread->init_tick;
+
+		/* 让出处理器*/
+		rt_thread_yield();
+	}
 
 	/* 扫描系统定时器列表 */
 	rt_timer_check();
@@ -49,6 +67,6 @@ void rt_tick_increase(void)
  */
 rt_tick_t rt_tick_get(void)
 {
-    /* return the global tick */
-    return rt_tick;
+	/* return the global tick */
+	return rt_tick;
 }

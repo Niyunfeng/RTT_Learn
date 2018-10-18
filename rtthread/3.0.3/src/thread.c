@@ -3,6 +3,7 @@
 
 extern struct rt_thread *rt_current_thread;
 extern rt_uint32_t rt_thread_ready_priority_group;
+extern rt_list_t rt_thread_priority_table[RT_THREAD_PRIORITY_MAX];
 
 rt_err_t rt_thread_init(struct rt_thread *thread,
                         const char 		*name,
@@ -10,7 +11,8 @@ rt_err_t rt_thread_init(struct rt_thread *thread,
                         void 			*parameter,
                         void 			*stack_start,
                         rt_uint32_t		stack_size,
-                        rt_uint8_t 		priority)
+                        rt_uint8_t 		priority,
+                        rt_uint32_t		tick)
 {
 	/* 线程对象初始化 */
 	/* 线程结构体开头部分的4个成员就是rt_object_t成员 */
@@ -18,24 +20,27 @@ rt_err_t rt_thread_init(struct rt_thread *thread,
 
 	rt_list_init(&(thread->tlist));
 
-	thread->entry = (void *)entry;
-	thread->parameter = parameter;
+	thread->entry            = (void *)entry;
+	thread->parameter        = parameter;
 
-	thread->stack_addr = stack_start;
-	thread->stack_size = stack_size;
+	thread->stack_addr       = stack_start;
+	thread->stack_size       = stack_size;
 
-	thread->sp =
-	    (void *) rt_hw_stack_init(	thread->entry,
-	                                thread->parameter,
-	                                (void *)((char *) thread->stack_addr + thread->stack_size - 4));
+	thread->sp               = (void *) rt_hw_stack_init(thread->entry,
+	                           thread->parameter,
+	                           (void *)((char *) thread->stack_addr + thread->stack_size - 4));
 
-	thread->init_priority       = priority;
-	thread->current_priority    = priority;
-	thread->number_mask         = 0;
+	thread->init_priority    = priority;
+	thread->current_priority = priority;
+	thread->number_mask      = 0;
 
 	/* 错误码和状态 */
-	thread->error = RT_EOK;
-	thread->stat = RT_THREAD_INIT;
+	thread->error            = RT_EOK;
+	thread->stat             = RT_THREAD_INIT;
+
+	/* 时间片相关 */
+	thread->init_tick        = tick;
+	thread->remaining_tick   = tick;
 
 	/* 初始化线程定时器 */
 	rt_timer_init(&(thread->thread_timer),		/* 静态定时器对象 */
@@ -240,4 +245,45 @@ void rt_thread_timeout(void *parameter)
 	rt_schedule();
 }
 
+/**
+ * 该函数将让当前线程让出处理器，调度器选择最高优先级的线程运行。
+ * 当前让出处理器之后，当前线程还在就绪态。
+ *
+ * @return RT_EOK
+ */
+rt_err_t rt_thread_yield(void)
+{
+	register rt_base_t level;
+	struct rt_thread *thread;
+
+	/* 关中断 */
+	level = rt_hw_interrupt_disable();
+
+	/* 获取当前线程的线程控制块 */
+	thread = rt_current_thread;
+
+	/* 如果线程在就绪态，且同一个优先级下不止一个线程 */
+	if ((thread->stat & RT_THREAD_STAT_MASK) == RT_THREAD_READY &&
+	        thread->tlist.next != thread->tlist.prev)
+	{
+		/* 将时间片耗完的线程从就绪列表移除 */
+		rt_list_remove(&(thread->tlist));
+
+		/* 将线程插入到该优先级下的链表的尾部 */
+		rt_list_insert_before(&(rt_thread_priority_table[thread->current_priority]),
+		                      &(thread->tlist));
+
+		/* 开中断 */
+		rt_hw_interrupt_enable(level);
+
+		/* 执行调度 */
+
+		return RT_EOK;
+	}
+
+	/* 开中断 */
+	rt_hw_interrupt_enable(level);
+
+	return RT_EOK;
+}
 
