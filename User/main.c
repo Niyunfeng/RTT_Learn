@@ -20,6 +20,7 @@
 */
 rt_uint8_t flag1;
 rt_uint8_t flag2;
+rt_uint8_t flag3;
 
 extern rt_list_t rt_thread_priority_table[RT_THREAD_PRIORITY_MAX];
 
@@ -31,15 +32,18 @@ extern rt_list_t rt_thread_priority_table[RT_THREAD_PRIORITY_MAX];
 */
 struct rt_thread rt_flag1_thread;
 struct rt_thread rt_flag2_thread;
+struct rt_thread rt_flag3_thread;
 
 ALIGN(RT_ALIGN_SIZE)
 /* 定义线程栈 */
 rt_uint8_t rt_flag1_thread_stack[512];
 rt_uint8_t rt_flag2_thread_stack[512];
+rt_uint8_t rt_flag3_thread_stack[512];
 
 /* 线程声明 */
 void flag1_thread_entry(void *p_arg);
 void flag2_thread_entry(void *p_arg);
+void flag3_thread_entry(void *p_arg);
 
 /*
 *****************************************************************
@@ -70,6 +74,9 @@ int main(void)
 	/* SysTick中断频率设置 */
 	SysTick_Config(SystemCoreClock / RT_TICK_PER_SECOND);
 
+	/* 系统定时器列表初始化 */
+	rt_system_timer_init();
+
 	/* 调度器初始化 */
 	rt_system_scheduler_init();
 
@@ -83,7 +90,7 @@ int main(void)
 	                RT_NULL,                                                            /* 线程形参 */
 	                &rt_flag1_thread_stack[0],                                          /* 线程栈起始地址 */
 	                sizeof(rt_flag1_thread_stack),                                      /* 线程栈大小，单位为字节 */
-                  2);                                                                 /* 优先级 */
+	                2);                                                                 /* 优先级 */
 
 	/* 将线程插入到就绪列表 */
 	// rt_list_insert_before( &(rt_thread_priority_table[0]), &(rt_flag1_thread.tlist) );
@@ -96,10 +103,21 @@ int main(void)
 	                RT_NULL,                                                            /* 线程形参 */
 	                &rt_flag2_thread_stack[0],                                          /* 线程栈起始地址 */
 	                sizeof(rt_flag2_thread_stack),                                      /* 线程栈大小，单位为字节 */
-                  3);                                                                 /* 优先级 */
+	                3);                                                                 /* 优先级 */
 	/* 将线程插入到就绪列表 */
 	// rt_list_insert_before( &(rt_thread_priority_table[1]), &(rt_flag2_thread.tlist) );
 	rt_thread_startup(&rt_flag2_thread);
+
+	/* 将线程插入到就绪列表 */
+	rt_thread_init( &rt_flag3_thread,
+	                "rt_flag3_thread",
+	                flag3_thread_entry,
+	                RT_NULL,
+	                &rt_flag3_thread_stack[0],
+	                sizeof(rt_flag3_thread_stack),
+	                4);
+	/* 将线程插入到就绪列表 */
+	rt_thread_startup(&rt_flag3_thread);
 
 	/* 启动系统调度器 */
 	rt_system_scheduler_start();
@@ -117,29 +135,16 @@ void delay (rt_uint32_t count)
 	for (; count != 0; count--);
 }
 
-rt_base_t level0;
-rt_uint8_t g_val = 0;
-
 /* 线程1 */
 void flag1_thread_entry(void *p_arg)
 {
 
 	for (;;)
 	{
-#if 0
 		flag1 = 1;
-		delay(100);
+		rt_thread_delay(4);
 		flag1 = 0;
-		delay(100);
-
-		/* 线程切换，这里是手动切换 */
-		rt_schedule();
-#else
-		flag1 = 1;
-		rt_thread_delay(2);
-		flag1 = 0;
-		rt_thread_delay(2);
-#endif
+		rt_thread_delay(4);
 	}
 }
 
@@ -148,20 +153,22 @@ void flag2_thread_entry(void *p_arg)
 {
 	for (;;)
 	{
-#if 0
 		flag2 = 1;
-		delay(100);
+		rt_thread_delay(2);
 		flag2 = 0;
-		delay(100);
+		rt_thread_delay(2);
+	}
+}
 
-		/* 线程切换，这里是手动切换 */
-		rt_schedule();
-#else
-		flag2 = 1;
-		rt_thread_delay(2);
-		flag2 = 0;
-		rt_thread_delay(2);
-#endif
+/* 线程3 */
+void flag3_thread_entry( void *p_arg)
+{
+	for ( ;; )
+	{
+		flag3 = 1;
+		rt_thread_delay(3);
+		flag3 = 0;
+		rt_thread_delay(3);
 	}
 }
 

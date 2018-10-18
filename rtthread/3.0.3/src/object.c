@@ -142,8 +142,7 @@ static struct rt_object_information
 
 };
 
-struct rt_object_information *
-rt_object_get_infomation(enum rt_object_class_type type)
+struct rt_object_information *rt_object_get_infomation(enum rt_object_class_type type)
 {
 	int index;
 	for (index = 0; index < RT_Object_Info_Unknown; index ++)
@@ -190,5 +189,39 @@ void rt_object_init(struct rt_object 			*object,
 	rt_hw_interrupt_enable(temp);
 }
 
+/**
+ * 将对象从容器列表中脱离，但是对象占用的内存并不会释放
+ * 
+ * @param object 需要脱离容器的对象
+ */
+void rt_object_detach(rt_object_t object)
+{
+    register rt_base_t temp;
 
+    /* 关中断 */
+    temp = rt_hw_interrupt_disable();
+
+    /* 从容器列表中脱离 */
+    rt_list_remove(&(object->list));
+
+    /* 开中断 */
+    rt_hw_interrupt_enable(temp);
+}
+
+/**
+ * 判断一个对象释放是系统对象
+ * 通常，一个对象在初始化的时候会被设置为RT_Object_Class_Static
+ *
+ * @param 需要判断的对象类型
+ *
+ * @return 如果是系统对象则返回RT_TRUE，否则则返回 RT_FALSE
+ */
+rt_bool_t rt_object_is_systemobject(rt_object_t object)
+{
+
+    if (object->type & RT_Object_Class_Static)
+        return RT_TRUE;
+
+    return RT_FALSE;
+}
 
